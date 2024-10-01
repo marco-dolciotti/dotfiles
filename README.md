@@ -8,8 +8,7 @@ and the file structure mirrors that of my home directory
 
 # How to install
 
-!!! warning "WARNING"
-    i am not a master bash scripter, so back up your dotfiles before using my scripts.
+## :warning: *I AM NOT A MASTER BASH SCRIPTER, SO BACK UP YOUR DOTFILES BEFORE USING MY SCRIPTS*
 
 1. fork this repo to make it your own
 2. remove from this repo the files you do not want overwritten in your machine
@@ -17,8 +16,7 @@ and the file structure mirrors that of my home directory
     ```bash
     ~/dotfiles/scripts/install_dotfiles.sh
     ```
-    !!! warning "WARNING"
-        this will overwrite your current dotfiles if you already have them
+    ## :warning: *THIS WILL OVERWRITE YOUR CURRENT DOTFILES IF YOU ALREADY HAVE THEM*
 
 # How to use
 
