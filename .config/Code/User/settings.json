@@ -1,0 +1,109 @@
+
+{
+    "C_Cpp.default.compilerPath": "/usr/bin/cpp",
+    "code-runner.runInTerminal": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.editorAssociations": {
+        "*.pdf": "default"
+    },
+    "vim.smartRelativeLine": true,
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "vim.sneak": true,
+    "vim.sneakReplacesF": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "rsp-ui.enableStartServerOnActivation": [
+        {
+            "id": "redhat.vscode-community-server-connector",
+            "name": "Community Server Connector",
+            "startOnActivation": true
+        }
+    ],
+    "vim.vimrc.enable": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "todo",
+        "Todo",
+        "ToDo"
+    ],
+    "tabnine.experimentalAutoImports": true,
+    "cmake.showOptionsMovedNotification": false,
+    "workbench.colorTheme": "Alt Catppuccin Mocha",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "vim.vimrc.path": "$HOME/.vimrc",
+    "git.enableSmartCommit": true,
+    "github.copilot.preferredAccount": "marco-dolciotti-polimi",
+    "cSpell.userWords": [
+        "Servlet"
+    ],
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "[",
+                "e"
+            ],
+            "commands": [
+                "editor.action.marker.prev"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "e"
+            ],
+            "commands": [
+                "editor.action.marker.next"
+            ]
+        },
+        {
+            "before": [
+                "<Leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.problems.focus"
+            ]
+        },
+        {
+            "before": [
+                "<C-p>"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        }
+    ],
+    "vim.leader": " ",
+    "files.autoSave": "afterDelay",
+    "vim.highlightedyank.enable": true,
+    "rust-analyzer.check.overrideCommand": null,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<C-j>"],
+            "commands": ["selectNextSuggestion"]
+        },
+        {
+            "before": ["<C-k>"],
+            "commands": ["selectPrevSuggestion"]
+        }
+    ]
+
+}

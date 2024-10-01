@@ -1,3 +1,5 @@
 [user]
 	name = marco-dolciotti
 	email = marco.dolciotti.2002@gmail.com
+[init]
+	defaultBranch = main
