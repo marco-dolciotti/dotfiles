@@ -17,6 +17,11 @@ and the file structure mirrors that of my home directory
     ~/dotfiles/scripts/install_dotfiles.sh
     ```
     ## :warning: *THIS WILL OVERWRITE YOUR CURRENT DOTFILES IF YOU ALREADY HAVE THEM*
+4. if you want to install my essential tools, run the script
+    ```bash
+    ~/dotfiles/scripts/install_tools.sh
+    ```
+    
 
 # How to use
 
