@@ -36,6 +36,7 @@ alias fd 'fdfind'
 alias fcd 'cd "$(find . -type d | fzf)"'
 alias fvim 'vim "$(fzf)"'
 alias mynotes 'vim "$(find $MYNOTES | fzf)"'
+alias myip "ip address | grep 'inet 192.' | awk '{print \$2}'"
 
 # Functions
 function mkcd

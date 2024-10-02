@@ -1,6 +1,6 @@
 # Marco Dolciotti's dotfiles
 
-this are my linux dotfiles, i keep them here to have version control,\
+these are my linux dotfiles, i keep them here to have version control,\
 feel free to snoop around and copy stuff if you feel like it
 
 the repo uses GNU Stow to create symlinks to all the appropriate locations,\

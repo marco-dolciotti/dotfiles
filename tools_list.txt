@@ -1,0 +1,17 @@
+# essentials
+tmux
+vim
+ripgrep
+fd-find
+fzf
+tldr
+git
+stow
+zsh
+ssh
+
+# development
+neovim
+python3
+cargo
+
