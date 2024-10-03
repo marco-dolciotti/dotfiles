@@ -31,7 +31,8 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # Keybindings
-bindkey -e
+## emacs keybindings
+bindkey -v
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^[w' kill-region
@@ -81,6 +82,9 @@ alias du="du -h --max-depth=1"
 alias fd='fdfind'
 alias fcd='cd "$(find . -type d | fzf)"'
 alias fvim='vim "$(fzf)"'
+alias z='zoxide query'
+alias fz='zoxide query --interactive'
+
 alias mynotes='vim "$(find $MYNOTES | fzf)"'
 alias myip="ip address | grep 'inet 192.' | awk '{print \$2}'"
 

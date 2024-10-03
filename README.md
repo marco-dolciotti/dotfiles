@@ -1,6 +1,7 @@
 # Marco Dolciotti's dotfiles
 
-these are my linux dotfiles, i keep them here to have version control,\
+these are my linux dotfiles, alongside the scripts used to automatically\
+manage them, i keep them here to have version control,\
 feel free to snoop around and copy stuff if you feel like it
 
 the repo uses GNU Stow to create symlinks to all the appropriate locations,\
@@ -8,7 +9,7 @@ and the file structure mirrors that of my home directory
 
 # How to install
 
-## :warning: *I AM NOT A MASTER BASH SCRIPTER, SO BACK UP YOUR DOTFILES BEFORE USING MY SCRIPTS*
+## :warning: *I AM NOT AN EXPERT BASH SCRIPTER, SO BACK UP YOUR DOTFILES BEFORE USING MY SCRIPTS*
 
 1. fork this repo to make it your own
 2. remove from this repo the files you do not want overwritten in your machine
@@ -29,11 +30,11 @@ and the file structure mirrors that of my home directory
     ```bash
     ~/dotfiles/scripts/add_dotfile.sh your_file
     ```
-- save your dotfiles on remote
+- save your dotfiles on remote (do this regularly, maybe with cron)
     ```bash
     ~/dotfiles/scripts/push_dotfiles.sh your_file
     ```
-- load your dotfiles on remote
+- load your dotfiles from remote
     ```bash
     ~/dotfiles/scripts/pull_dotfiles.sh your_file
     ```
