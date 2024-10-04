@@ -56,3 +56,9 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Jump to previous d
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Jump to next diagnostic problem' })
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open diagnostic floating quickfix list' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
+-- Copilot keymaps
+local cs = require 'copilot.suggestion'
+
+-- toggle suggestion
+vim.keymap.set('n', '<Leader>aa', cs.toggle_auto_trigger, { desc = 'toggle copilot suggestion' })

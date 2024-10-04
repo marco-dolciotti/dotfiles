@@ -108,4 +108,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # starship prompt
 eval "$(starship init zsh)"
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

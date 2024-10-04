@@ -13,12 +13,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Auto-save when changing text or switching buffers
-vim.api.nvim_create_autocmd({"InsertLeave", "TextChanged", "BufLeave"}, {
-    pattern = "*", -- This applies to all files
-    callback = function()
-        if vim.bo.modified then
-            vim.cmd("silent! write")
-        end
-    end,
+vim.api.nvim_create_autocmd({ 'BufLeave' }, {
+  pattern = '*', -- This applies to all files
+  callback = function()
+    if vim.bo.modified then
+      vim.cmd 'silent! write'
+    end
+  end,
 })
-

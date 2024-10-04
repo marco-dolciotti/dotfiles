@@ -17,12 +17,6 @@
 -- Options and global variables file
 require 'options'
 
--- Keymaps file
-require 'keymaps'
-
--- Autocommands file
-require 'autocommands'
-
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -149,6 +143,12 @@ require('lazy').setup({
     },
   },
 })
+
+-- Keymaps file
+require 'keymaps'
+
+-- Autocommands file
+require 'autocommands'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
