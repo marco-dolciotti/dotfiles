@@ -1,5 +1,6 @@
 .git
+.gitconfig
 LICENSE.*
 README.*
 git-diagram
-scripts
+tools_list.txt

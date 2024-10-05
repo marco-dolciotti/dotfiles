@@ -30,12 +30,6 @@ autoload -Uz compinit && compinit
 
 zinit cdreplay -q
 
-# Keybindings
-## emacs keybindings
-bindkey -v
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
-bindkey '^[w' kill-region
 
 # History
 HISTSIZE=5000
@@ -64,7 +58,19 @@ EDITOR="nvim"
 export MYNOTES="$HOME/obsidian_linux_vault/linux"
 
 
+# Functions
+mkcd() {
+   mkdir -p $1
+   cd $1
+}
 
+lfcd () {
+   cd "$(command lf -print-last-dir $1)"
+}
+
+__tmux-sessionizer() {
+   ~/dotfiles/scripts/tmux_sessionizer.sh
+}
 
  # Aliases
 alias c='clear'
@@ -88,15 +94,23 @@ alias fz='zoxide query --interactive'
 alias mynotes='vim "$(find $MYNOTES | fzf)"'
 alias myip="ip address | grep 'inet 192.' | awk '{print \$2}'"
 
-# Functions
-mkcd() {
-   mkdir -p $1
-   cd $1
-}
+# Zle widgets
 
-lfcd () {
-   cd "$(command lf -print-last-dir $1)"
-}
+zle -N __tmux-sessionizer-widget __tmux-sessionizer
+
+# Keybindings
+
+## vim keybindings
+bindkey -v
+
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+bindkey '^[w' kill-region
+
+## sessionizer
+
+bindkey '^f' __tmux-sessionizer-widget
+
 
 # custom scripts
 set PATH $HOME/.local/bin:$PATH
