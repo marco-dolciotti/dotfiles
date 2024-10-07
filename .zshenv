@@ -1,3 +1,6 @@
+#set terminal
+export TERMINAL="kitty"
+
 #set PATH for nvim
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
