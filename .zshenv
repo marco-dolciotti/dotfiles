@@ -13,3 +13,5 @@ export PATH="$PATH:$HOME/.config/emacs/bin"
 # Set PATH for custom scripts
 export PATH="$PATH:$HOME/.local/bin"
 
+# set PATH for cargo installed binaries
+export PATH="$PATH:$HOME/.cargo/env"

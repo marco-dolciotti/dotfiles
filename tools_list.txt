@@ -19,6 +19,9 @@ cargo
 i3
 blueman
 pulseaudio
+amixer
+brightnessctl
+xbacklight
 rofi
 polybar
 feh

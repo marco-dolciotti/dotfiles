@@ -150,3 +150,4 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH=$PATH:/home/marco/.local/bin
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
