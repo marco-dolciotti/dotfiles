@@ -21,3 +21,9 @@ vim.api.nvim_create_autocmd({ 'BufLeave' }, {
     end
   end,
 })
+
+-- Do not continue comment when going to new line
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  command = 'setlocal formatoptions-=cro',
+})
