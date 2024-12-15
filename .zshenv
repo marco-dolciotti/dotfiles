@@ -1,6 +1,10 @@
 #set terminal
 export TERMINAL="kitty"
 
+# set desktop environment
+export XDG_CURRENT_DESKTOP="GNOME"
+export XDG_SESSION_TYPE="x11"
+
 #set PATH for nvim
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
@@ -15,3 +19,4 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # set PATH for cargo installed binaries
 export PATH="$PATH:$HOME/.cargo/env"
+
