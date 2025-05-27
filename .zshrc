@@ -67,6 +67,14 @@ mkcd() {
    cd $1
 }
 
+update() {
+   if command -v apt &> /dev/null; then
+      sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove
+   elif command -v pacman &> /dev/null; then
+      pacman -Syu --verbose
+   fi
+}
+
 lfcd () {
    cd "$(command lf -print-last-dir $1)"
 }
@@ -86,7 +94,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias l.='ls --color -a | grep ^\..+'
 alias please='sudo $(history | head -1)'
-alias update='sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove' 
 alias du="du -h --max-depth=1"
 alias fd='fdfind'
 alias fcd='cd "$(find . -type d | fzf)"'
@@ -96,6 +103,7 @@ alias fz='zoxide query --interactive'
 
 alias mynotes='vim "$(find $MYNOTES | fzf)"'
 alias myip="ip address | grep 'inet 192.' | awk '{print \$2}'"
+alias fzman="bash -c \"compgen -c\" | fzf | xargs man"
 
 # Zle widgets
 
@@ -134,4 +142,4 @@ eval "$(zoxide init zsh)"
 
 
 # cowsay initial message
-fortune-cowsay.sh
+# fortune-cowsay.sh
