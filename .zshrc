@@ -104,6 +104,7 @@ alias fz='zoxide query --interactive'
 alias mynotes='vim "$(find $MYNOTES | fzf)"'
 alias myip="ip address | grep 'inet 192.' | awk '{print \$2}'"
 alias fzman="bash -c \"compgen -c\" | fzf | xargs man"
+alias fzgrep="rg --no-heading --line-number . | fzf --delimiter : --preview 'bat --style=numbers --color=always {1} --line-range {2}:'"
 
 # Zle widgets
 

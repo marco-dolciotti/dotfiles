@@ -1,4 +1,4 @@
-# essentials
+# cli tools
 zsh
 tmux
 vim
@@ -10,19 +10,33 @@ git
 stow
 zsh
 ssh
+bat
+
 
 # development
+
 neovim
 python3
 cargo
 
+
 # window manager and aesthetics
+
+## window managers
 i3
-blueman
-pulseaudio
-amixer
-brightnessctl
-xbacklight
+hyprland
+## top bar for hyprland
 rofi
 polybar
+## background
 feh
+## bluetooth
+blueman
+## audio
+pulseaudio
+amixer
+## brightness for laptops
+brightnessctl
+xbacklight
+## brightness for external monitors
+ddcutil
