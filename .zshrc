@@ -110,6 +110,9 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^[w' kill-region
 
+## history search
+bindkey "^R" history-incremental-search-backward
+
 ## sessionizer
 
 bindkey '^f' __tmux-sessionizer-widget
