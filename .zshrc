@@ -1,3 +1,6 @@
+# custom scripts
+set PATH $HOME/.local/bin:$PATH
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -60,15 +63,23 @@ EDITOR="nvim"
 # my notes folder
 export MYNOTES="$HOME/obsidian_linux_vault/linux"
 
-
 # Functions
 mkcd() {
    mkdir -p $1
    cd $1
 }
 
-lfcd () {
+lfcd() {
    cd "$(command lf -print-last-dir $1)"
+}
+
+## extracts the nth field using awk
+field() {
+   if [[ $# != 1 ]]; then
+      echo 'field can only accept exactly 1 argument' >&2
+      return 1
+   fi
+   awk '{print $'"$1"'}'
 }
 
 __tmux-sessionizer() {
@@ -118,10 +129,10 @@ bindkey "^R" history-incremental-search-backward
 bindkey '^f' __tmux-sessionizer-widget
 
 
-# custom scripts
-set PATH $HOME/.local/bin:$PATH
 
 # Shell integrations
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 eval "$(fzf --zsh)" > /dev/null
 eval "$(zoxide init --cmd cd zsh)"
 
@@ -131,7 +142,6 @@ eval "$(starship init zsh)"
 # zoxide
 eval "$(zoxide init zsh)"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
 

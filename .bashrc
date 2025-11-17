@@ -125,9 +125,12 @@ lfcd () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+#(history-search) alias to search through history with fzf then execute the command
+alias hs='history | fzf | sed "s/^ *[0-9]* *//" | cat /dev/stdin'
 
 
-#sharship prompt black magic fuckery
+
+#starship prompt black magic fuckery
 eval 
             __main() {
                 local major="${BASH_VERSINFO[0]}"
